@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    {% endblock %}
+    <style>
+        * {
+            margin: 0 auto;
+        }
+        #nav {
+            height: 50px;
+            background-color: lavender;
+            color: midnightblue;
+            font: 20px;
+            font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+        }
+
+        #nav ul {
+            line-height: 50px;
+            float: none;
+        }
+        #nav ul li {
+            list-style: none;
+            float: left;
+            padding: 0px 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="nav">
+    <ul>
+        <li>
+{#           此处用到了URL链接，原来url_for在html里面也能用啊！！！好神奇！！！#}
+            <a href="{{ url_for('index') }}">首页</a>
+        </li>
+        <li>
+{#           此处用到了URL链接#}
+            <a href="{{ url_for('news') }}">新闻</a>
+        </li>
+    </ul>
+</div>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

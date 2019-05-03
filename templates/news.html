@@ -1,0 +1,40 @@
+{#继承#}
+{% extends 'base.html' %}
+
+{#block自定义#}
+#title
+{% block title %}
+    <title>新闻</title>
+{% endblock %}
+
+#content
+{% block content %}
+    <div id="content">
+{#      调用视图函数传过来的参数#}
+        <p>{{ location }}</p>
+{#      if判读#}
+        {% if booklist %}
+            <table>
+            <tr>
+                <td>书名</td>
+                <td>作者</td>
+                <td>单价</td>
+            </tr>
+{#          for循环的使用#}
+            {% for book in booklist %}
+                <tr>
+{#                  ！！！如果通过视图函数传过来的参数在html标签中一定用{{  }}扩起来！！！  #}
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.auditor }}</td>
+                    <td>{{ book.price }}</td>
+                </tr>
+            {% endfor %}
+
+            </table>
+{#            此处用到了 "过滤器" （通过传递过来的参数值产生新的参数值）#}
+            <p>共计{{ booklist|length }}本</p>
+
+        {% endif %}
+    </div>
+
+{% endblock %}

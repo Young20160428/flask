@@ -1,0 +1,16 @@
+{#继承#}
+{% extends 'base.html' %}
+
+{#block自定义#}
+#title
+{% block title %}
+    <title>首页</title>
+{% endblock %}
+
+#content
+{% block content %}
+    <div id="content">
+       <p>{{ location }}</p>
+    </div>
+
+{% endblock %}
