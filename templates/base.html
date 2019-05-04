@@ -4,29 +4,12 @@
     <meta charset="UTF-8">
     {% block title %}
     {% endblock %}
-    <style>
-        * {
-            margin: 0 auto;
-        }
-        #nav {
-            height: 50px;
-            background-color: lavender;
-            color: midnightblue;
-            font: 20px;
-            font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-        }
+{#  加载静态样式表#}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+{#  加载js文件#}
+    <script type="text/javascript" src="{{ url_for('static',filename='js/test.js') }}"></script>
 
-        #nav ul {
-            line-height: 50px;
-            float: none;
-        }
-        #nav ul li {
-            list-style: none;
-            float: left;
-            padding: 0px 20px;
-        }
 
-    </style>
 </head>
 <body>
 

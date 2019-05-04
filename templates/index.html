@@ -12,5 +12,11 @@
     <div id="content">
        <p>{{ location }}</p>
     </div>
+    
+    <div>
+{#      加载静态文件,使用url_for()函数,等价于使用全路径，注意/开头 #}
+        <img src="{{ url_for('static',filename='images/bighug.jpg') }}" alt="">
+{#      <img src="/static/images/bighug.jpg" alt="">  #}
+    </div>
 
 {% endblock %}

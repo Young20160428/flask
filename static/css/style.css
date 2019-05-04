@@ -1,0 +1,26 @@
+* {
+    margin: 0 auto;
+}
+#nav {
+    height: 50px;
+    background-color: lavender;
+    color: midnightblue;
+    font: 20px;
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+#nav ul {
+    line-height: 50px;
+    float: none;
+}
+
+#nav ul li {
+    list-style: none;
+    float: left;
+    padding: 0px 20px;
+}
+
+img {
+    width: 250px;
+    height: 200px;
+}
